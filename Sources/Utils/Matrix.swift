@@ -79,7 +79,7 @@ struct Matrix<Element>: Sequence {
     
     // MARK: Sequence
     func makeIterator() -> MatrixIterator<Element> {
-        return MatrixIterator<Element>(self)
+        return MatrixIterator(self)
     }
 }
 
