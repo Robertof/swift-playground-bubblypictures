@@ -212,7 +212,7 @@ open class BubblifierViewController: UIViewController, BubbleContainerDelegate {
     
     // MARK: Methods
     /// This function generates the bubbles. It is composed of a multi-step generation.
-    func draw() {
+    @objc func draw() {
         // Try to analyze color information about the image.
         // If we can't, then bail out right now and let the user know.
         guard
@@ -312,7 +312,7 @@ open class BubblifierViewController: UIViewController, BubbleContainerDelegate {
     }
     
     /// Saves the current `bubbleView` to the gallery.
-    func saveToGallery() {
+    @objc func saveToGallery() {
         UIGraphicsBeginImageContext (self.bubblesView.frame.size)
         defer { UIGraphicsEndImageContext() }
         // Render the current bubblesView to the freshly created image context.

@@ -45,10 +45,10 @@ final class BubbleContainerView: UIView {
     
     
     /// Splits all the bubbles found in this view's subviews, recursively.
-    func splitAll() { self.splitAll (in: nil) }
+    @objc func splitAll() { self.splitAll (in: nil) }
     
     /// Splits all the bubbles, recursively.
-    func splitAll (in array: [UIView]?) {
+    @objc func splitAll (in array: [UIView]?) {
         // Establish a delay between split operations, to increase realness.
         var delay = 0.3
         for subview in array ?? self.subviews {
